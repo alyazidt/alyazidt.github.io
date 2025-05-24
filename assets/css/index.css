@@ -11462,6 +11462,32 @@ pre .code {
   align-items: center;
   -webkit-transition: all, 0.3s;
   transition: all, 0.3s;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-toggle {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff; /* غيّره حسب لون الخلفية */
+  display: none; /* يظهر فقط في الشاشات الصغيرة */
 }
 
 .custom-navbar .nav {
@@ -11969,7 +11995,6 @@ pre .code {
   gap: 10px; /* المسافة بين الأزرار */
 }
 
-
 .filter-btn {
   border: none;
   background-color: #f5f1f1;
@@ -11980,7 +12005,6 @@ pre .code {
   transition: background-color 0.3s ease, color 0.3s ease;
   margin-right: 10px;
   outline: none;
-
 }
 .filter-btn.active,
 .filter-btn:hover {
@@ -12014,5 +12038,148 @@ pre .code {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: #f0eadc;
+  cursor: pointer;
+
+  /* أضفت: */
+  position: relative;
+  z-index: 1100;
+}
+
+@media (max-width: 768px) {
+  .custom-navbar .container {
+    align-items: stretch;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav.show {
+    display: block;
+  }
+
+  /* خصائص قائمة nav */
+  .custom-navbar .nav {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(69, 110, 53, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 60px 0 20px 0; /* مساحة للشريط */
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .custom-navbar .nav.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    cursor: pointer;
+    /* position و z-index تمت إضافتها سابقاً */
+  }
+
+  .custom-navbar .nav .item {
+    margin: 6px 0;
+  }
+
+  .custom-navbar .nav .item a {
+    color: #456e35;
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .header .header-content {
+    padding-top: 40px;
+    max-width: 100%;
+  }
+
+  .header-title .down {
+    font-size: 26px !important;
+    line-height: 1.4;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  .header .header-content .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .social-icons-vertical {
+    position: static;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 20px;
+    gap: 12px;
+    padding: 10px 0;
+  }
+
+  .social-icons-vertical a {
+    font-size: 20px;
+    color: #f0eadc;
+    transition: color 0.3s ease;
+  }
+
+  .social-icons-vertical a:hover {
+    color: #ffd95d;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-img-holder {
+    margin: 0 auto 20px auto;
+    max-width: 300px;
+    min-width: 0;
+  }
+
+  .about-caption {
+    padding: 0 15px;
+  }
+
+  .about-caption h2 {
+    font-size: 24px;
+  }
+
+  .about-caption p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .about-caption .btn {
+    font-size: 14px;
+    padding: 10px 20px;
   }
 }
