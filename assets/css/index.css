@@ -12183,3 +12183,8 @@ pre .code {
     padding: 10px 20px;
   }
 }
+@media (max-width: 768px) {
+  .map-preview {
+    display: none;
+  }
+}
