@@ -12186,6 +12186,6 @@ pre .code {
 
 @media (max-width: 768px) {
   .map-preview {
-    display: none;
+    display: none !important;
   }
 }
