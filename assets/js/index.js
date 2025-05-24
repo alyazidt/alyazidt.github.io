@@ -86,20 +86,72 @@ function autoResize(textarea) {
 //     });
 //   });
 
-const fonts = ["font-1", "font-2", "font-3", "font-4", "font-5", "font-6", "font-7", "font-8", "font-9", "font-10", "font-11", "font-12", "font-13", "font-14", "font-15", "font-16", "font-17", "font-18", "font-19", "font-20"];
+const fonts = [
+  "font-1",
+  "font-2",
+  "font-3",
+  "font-4",
+  "font-5",
+  "font-6",
+  "font-7",
+  "font-8",
+  "font-9",
+  "font-10",
+  "font-11",
+  "font-12",
+  "font-13",
+  "font-14",
+  "font-15",
+  "font-16",
+  "font-17",
+  "font-18",
+  "font-19",
+  "font-20",
+];
 
 const typed = new Typed(".typed", {
-  strings: ["Software Engineering", "Web Developer", "Freelancer", 
-    "Mobile Application Developer", "Full Stack Developer", 
-    "Freelancer", "Coder", "Programmer", "Frontend Developer",
-    "Backend Developer"
+  strings: [
+    "Software Engineering",
+    "Web Developer",
+    "Freelancer",
+    "Mobile Application Developer",
+    "Full Stack Developer",
+    "Freelancer",
+    "Coder",
+    "Programmer",
+    "Frontend Developer",
+    "Backend Developer",
   ],
   typeSpeed: 100,
   backSpeed: 50,
   loop: true,
-  preStringTyped: function(arrayPos, self) {
-    const typedSpan = document.querySelector('.typed');
+  preStringTyped: function (arrayPos, self) {
+    const typedSpan = document.querySelector(".typed");
     const randomFont = fonts[Math.floor(Math.random() * fonts.length)];
     typedSpan.className = `typed ${randomFont}`;
   },
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navMenu = document.querySelector(".nav");
+  const navItems = document.querySelectorAll(".nav .item a");
+
+  // فتح وغلق القائمة بالزر
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("show");
+  });
+
+  // غلق القائمة عند الضغط على أي عنصر من nav
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      navMenu.classList.remove("show");
+    });
+  });
+
+  // غلق القائمة عند التمرير (scroll)
+  window.addEventListener("scroll", () => {
+    if (navMenu.classList.contains("show")) {
+      navMenu.classList.remove("show");
+    }
+  });
 });
