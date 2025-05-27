@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <!-- font icons -->
+    <link
+      rel="stylesheet"
+      href="assets/vendors/themify-icons/css/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Tap icon -->
+    <link href="/assets/imgs/Logo/logoImg.png" rel="icon" sizes="32x32" />
+
+    <!-- font awesome css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/Experience.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+  </head>
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+      <div class="container">
+        <div class="nav-header">
+          <a class="logo" href="/index.html">alyazidt</a>
+
+          <!-- زر القائمة (يظهر في الجوال فقط) -->
+          <button class="nav-toggle" id="navToggle">&#9776;</button>
+
+          <ul class="nav" id="navMenu">
+            <li class="item"><a class="link" href="#about">About Me</a></li>
+            <li class="item"><a class="link" href="#Projects">Projects</a></li>
+            <li class="item">
+              <a class="link" href="#Experience">Experience</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#Certifications">Certifications</a>
+            </li>
+            <li class="item"><a class="link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+      <div class="overlay"></div>
+      <div class="header-content container">
+        <ul class="social-icons-vertical">
+          <li>
+            <a href="https://www.linkedin.com/in/alyazidt" target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/alyazidt" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a href="mailto:alyazid88@gmail.com" target="_blank"
+              ><i class="fas fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://codepen.io/alyazidt" target="_blank"
+              ><i class="fa-brands fa-codepen"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://api.whatsapp.com/send?phone=96294315"
+              target="_blank"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/alyazidt" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.snapchat.com/add/alyazidtt" target="_blank"
+              ><i class="fa-brands fa-snapchat"></i
+            ></a>
+          </li>
+        </ul>
+        <h1 class="header-title">
+          <span class="down">I am Al-Yazid Al-Mukhaini</span>
+        </h1>
+        <div class="col-lg-9" id="hero">
+          <p>a <span class="typed"></span></p>
+        </div>
+
+        <a href="#Projects">
+          <button class="btn-rounded btn btn-outline-primary mt-4">
+            🚀 Have a Look
+          </button>
+        </a>
+      </div>
+    </header>
+    <!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+      <!-- container -->
+      <div class="container text-center">
+        <!-- about wrapper -->
+        <div class="about">
+          <div class="about-img-holder">
+            <img
+              src="/assets/imgs/mypic3.png"
+              class="about-img"
+              ondragstart="return false;"
+              oncontextmenu="return false;"
+            />
+          </div>
+          <div class="about-caption">
+            <h2 class="section-title mb-3">About Me</h2>
+            <p>
+              A recent graduate with a Bachelor's Degree in Software
+              Engineering. I specialize in web and mobile app development, I
+              have a strong foundation in software development, programming, and
+              system design, with hands-on experience in languages such as
+              Python, Java, and SQL. I aspire to contribute to advancements in
+              technology that make a meaningful difference.
+            </p>
+            <a href="/assets/pdf/CV.pdf" target="_blank">
+              <button class="btn-rounded btn btn-outline-primary mt-4">
+                Download CV
+              </button>
+            </a>
+          </div>
+        </div>
+        <!-- end of about wrapper -->
+      </div>
+      <!-- end of container -->
+    </section>
+    <!-- end of about section -->
+
+    <!-- Projects section -->
+    <section class="section" id="Projects">
+      <div class="container text-center">
+        <h6 class="section-title mb-6">Projects</h6>
+
+        <!-- Filter buttons -->
+        <div
+          id="languageFilter"
+          class="mb-5 d-flex justify-content-center flex-wrap gap-2"
+        ></div>
+
+        <!-- Project cards -->
+        <div class="row justify-content-center" id="projects-container"></div>
+      </div>
+    </section>
+    <!-- end of Projects section -->
+
+    <!-- Experience section -->
+    <section class="section" id="Experience">
+      <div class="container text-center">
+        <h6 class="section-title mb-6">Experience</h6>
+
+        <section class="ftco-section ftco-no-pb goto-here" id="resume-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <nav id="navi">
+                  <ul>
+                    <li><a href="#page-1">Education</a></li>
+                    <li><a href="#page-2">Experience</a></li>
+                    <li><a href="#page-3">Awards</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="col-md-9">
+                <div id="page-1" class="page one">
+                  <h2 class="heading">Education</h2>
+
+                  <!-- University of Technology and Applied Sciences -->
+                  <div class="resume-wrap d-flex ftco-animate">
+                    <div class="icon">
+                      <a href="https://www.utas.edu.om/ibra" target="_blank"
+                        ><img src="/assets/imgs/Logo/utaslogo.png" alt=""
+                      /></a>
+                    </div>
+                    <div class="text pl-3">
+                      <span class="date">
+                        <span class="start">2018</span> -
+                        <span class="start">2025</span></span
+                      >
+                      <h2>Bachelor's Degree in Software Engineering</h2>
+                      <span class="position">
+                        <a href="https://www.utas.edu.om/ibra" target="_blank">
+                          University of Technology and Applied Sciences -
+                        </a>
+                        <span class="location">
+                          <a
+                            href="https://maps.app.goo.gl/aXsMHzKqxA4xYU4C9"
+                            target="_blank"
+                            >Ibra</a
+                          >
+
+                          <div class="map-preview">
+                            <img
+                              src="/assets/imgs/Location/ibraLocation.png"
+                              alt="Map of Ibra"
+                            />
+                          </div>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- General Education Diploma -->
+                  <div class="resume-wrap d-flex ftco-animate">
+                    <div class="icon">
+                      <img src="/assets/imgs/Logo/ministerylogo.png" alt="" />
+                    </div>
+                    <div class="text pl-3">
+                      <span class="date">
+                        <span class="start">2017</span> -
+                        <span class="start">2018</span></span
+                      >
+                      <h2>General Education Diploma</h2>
+                      <span class="position">
+                        <a> Ahmed bin Majid School - </a>
+                        <span class="location">
+                          <a
+                            href="https://maps.app.goo.gl/mpJnjhDUj9Rqqq6F6"
+                            target="_blank"
+                            >Sur</a
+                          >
+
+                          <div class="map-preview">
+                            <img
+                              src="/assets/imgs/Location/Ahmed Bin Majed Secondary.png"
+                              alt="Map of Ahmed bin Majid School"
+                            />
+                          </div>
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="page-2" class="page two">
+                  <h2 class="heading">Experience</h2>
+
+                  <!-- Code Academy -->
+                  <div class="resume-wrap d-flex ftco-animate">
+                    <div class="icon">
+                      <a href="https://www.ca-oman.com/" target="_blank"
+                        ><img
+                          src="/assets/imgs/Logo/CodeAcademyLogo.png"
+                          alt=""
+                      /></a>
+                    </div>
+                    <div class="text pl-3">
+                      <span class="date">
+                        <span class="start">13 April 2024</span> -
+                        <span class="end">Present</span></span
+                      >
+                      <h2>Trainee at Code Academy (Full Stack Development)</h2>
+                      <span class="position">
+                        <a href="https://www.ca-oman.com/" target="_blank">
+                          Code Academy -
+                        </a>
+                        <span class="location">
+                          <a
+                            href="https://maps.app.goo.gl/CPuDkHGiNkbRqK6n9"
+                            target="_blank"
+                            >Muscat</a
+                          >
+
+                          <div class="map-preview">
+                            <img
+                              src="/assets/imgs/Location/Code Academy.png"
+                              alt="Map of Code Academy"
+                            />
+                          </div>
+                        </span>
+                      </span>
+                      <!-- <p>
+                    - Disassembling the device, reassembling it, and identifying its components.
+                    <br/>
+                    - Configuring devices systems & Installing software and drivers.
+                  </p> -->
+                    </div>
+                  </div>
+
+                  <!-- Directorate General of Health Services -->
+                  <div class="resume-wrap d-flex ftco-animate">
+                    <div class="icon">
+                      <a
+                        href="https://moh.gov.om/en/hospitals-directorates/governorate-healthcare-facilities/south-sharqiya-governorate/"
+                        target="_blank"
+                        ><img src="/assets/imgs/Logo/MOH-best-LOGO.webp" alt=""
+                      /></a>
+                    </div>
+                    <div class="text pl-3">
+                      <span class="date">
+                        <span class="start">07 July 2024</span> -
+                        <span class="start">29 August 2024</span></span
+                      >
+                      <h2>Trainee at Maintenance & Technical Support</h2>
+                      <span class="position">
+                        <a
+                          href="https://moh.gov.om/en/hospitals-directorates/governorate-healthcare-facilities/south-sharqiya-governorate/"
+                          target="_blank"
+                        >
+                          Directorate General of Health Services -
+                        </a>
+                        <span class="location">
+                          <a
+                            href="https://maps.app.goo.gl/pWidU7YcFBNcinbK9"
+                            target="_blank"
+                            >Sur</a
+                          >
+
+                          <div class="map-preview">
+                            <img
+                              src="/assets/imgs/Location/Directorate General of Health Services.png"
+                              alt="Map of Directorate General of Health Services"
+                            />
+                          </div>
+                        </span>
+                      </span>
+                      <div class="task-box-row">
+                        <div class="task-box">
+                          🔧 Disassembling, reassembling, and identifying
+                          components.
+                        </div>
+                        <div class="task-box">
+                          💻 Configuring systems & installing software and
+                          drivers.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div id="page-3" class="page three">
+                    <h2 class="heading">Awards</h2>
+                    <div class="resume-wrap d-flex ftco-animate">
+                      <div class="icon">
+                        <a
+                          href="https://www.utas.edu.om/mussanah"
+                          target="_blank"
+                          ><img src="/assets/imgs/Logo/utaslogo.png" alt=""
+                        /></a>
+                      </div>
+                      <div class="text pl-3">
+                        <span class="date"
+                          ><span class="start">07 December 2023</span></span
+                        >
+                        <h2>First Place, FinTech Hackathon 2023</h2>
+                        <span class="position"
+                          ><a
+                            href="https://www.utas.edu.om/mussanah"
+                            target="_blank"
+                            >College of Economics and Business Administration,
+                            UTAS-Al Mussanah</a
+                          ></span
+                        >
+                        <p>Idea : Ghawazi - غــــوازي.</p>
+                        <div class="task-box-row">
+                          <div class="task-box">
+                            💰 A platform for personal finance management and
+                            acquiring financial skills.
+                          </div>
+                          <div class="task-box">
+                            📊 Combines user-friendliness with advanced
+                            analytical techniques.
+                          </div>
+                          <div class="task-box">
+                            🚀 Explore various investment opportunities and
+                            build a strong financial future.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- end of Experience section -->
+
+    <!-- Certifications section -->
+    <section class="section" id="Certifications">
+      <div class="container text-center">
+        <h6 class="section-title mb-6">Certifications</h6>
+        <div class="row" id="certifications-container">
+          <!-- الشهادات تُولَّد من JavaScript -->
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="pdfModal"
+        tabindex="-1"
+        aria-labelledby="pdfModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+          <div class="modal-content rounded-4">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="pdfModalLabel">Certificate</h5>
+              <button
+                type="button"
+                class="btn btn-light border rounded-circle"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+                style="
+                  width: 2.5rem;
+                  height: 2.5rem;
+                  font-size: 1.5rem;
+                  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                "
+              >
+                <i class="fas fa-times" style="color: black"></i>
+              </button>
+            </div>
+            <div class="modal-body p-0">
+              <iframe
+                id="pdfIframe"
+                src=""
+                width="100%"
+                height="600px"
+                style="border: none"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination controls -->
+      <div id="pagination" class="d-flex justify-content-center my-4">
+        <button id="prevBtn" class="btn btn-outline-primary me-2">
+          Previous
+        </button>
+        <div id="pageNumbers" class="d-flex gap-2 align-items-center"></div>
+        <button id="nextBtn" class="btn btn-outline-primary ms-2">Next</button>
+      </div>
+    </section>
+
+    <!-- end of Certifications section -->
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+      <div class="container text-center">
+        <h6 class="section-title mb-5">Contact Me</h6>
+        <!-- contact form -->
+        <form
+          action="#"
+          method="get"
+          class="contact-form col-md-10 col-lg-8 m-auto"
+        >
+          <div class="form-row">
+            <div class="form-group col-sm-6">
+              <input
+                type="text"
+                name="name"
+                class="form-control"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="form-group col-sm-6">
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="form-group col-sm-12">
+              <textarea
+                id="message"
+                name="message"
+                class="form-control"
+                oninput="autoResize(this)"
+                placeholder="Write your message..."
+                required
+              ></textarea>
+            </div>
+            <div class="form-group col-sm-12 mt-3">
+              <input
+                type="submit"
+                value="Send Message"
+                class="btn btn-outline-primary rounded"
+              />
+            </div>
+          </div>
+        </form>
+        <!-- end of contact form -->
+      </div>
+      <!-- end of container -->
+    </section>
+    <!-- end of contact section -->
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="social-icons-footer">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/alyazidt" target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/alyazidt" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a href="mailto:alyazid88@gmail.com" target="_blank"
+                ><i class="fas fa-envelope"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://codepen.io/alyazidt" target="_blank"
+                ><i class="fa-brands fa-codepen"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send?phone=96294315"
+                target="_blank"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/alyazidt" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.snapchat.com/add/alyazidtt" target="_blank"
+                ><i class="fa-brands fa-snapchat"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+        <p class="mb-0">&copy; 2025 alyazidt | All rights reserved.</p>
+      </div>
+    </footer>
+    <!-- end of page footer -->
+
+    <!-- JavaScript files for Experience -->
+    <div>
+      <script src="/assets/js/jquery.min.js"></script>
+      <script src="/assets/js/jquery-migrate-3.0.1.min.js"></script>
+      <script src="/assets/js/jquery.waypoints.min.js"></script>
+      <script src="/assets/js/jquery.stellar.min.js"></script>
+      <script src="/assets/js/owl.carousel.min.js"></script>
+      <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+      <script src="/assets/js/aos.js"></script>
+      <script src="/assets/js/scrollax.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+      <script src="/assets/js/main.js"></script>
+      <script src="/assets/js/index.js"></script>
+      <script src="/assets/js/pdfModalHandler.js"></script>
+      <script src="/assets/js/githubProject.js"></script>
+
+      <!-- core  -->
+      <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+      <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+      <!-- bootstrap 3 affix -->
+      <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </div>
+  </body>
+</html>
