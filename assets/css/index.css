@@ -11468,6 +11468,10 @@ pre .code {
   color: #456e35;
 }
 
+.custom-navbar.affix .nav-toggle {
+  color: #456e35;
+}
+
 .custom-navbar.affix .container {
   min-height: 65px;
 }
@@ -11981,12 +11985,12 @@ pre .code {
   .custom-navbar .nav {
     display: none;
     flex-direction: column;
-    background-color: rgba(69, 110, 53, 0.25);
+    background-color: #fff;
     position: fixed;
-    top: 0;
+    top: 45px;
     left: 0;
     width: 100%;
-    padding: 60px 0 20px 0; /* مساحة للشريط */
+    padding: 20px 0 20px 0; /* مساحة للشريط */
     box-sizing: border-box;
     text-align: center;
     z-index: 1000;
